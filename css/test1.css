@@ -25,13 +25,10 @@ body {
 }
 
 #panelbackground { 
-	background: url(../images/panel1.png) 100% 0 no-repeat fixed; 
-	background: url(../images/panel2.png) 100% 1476px no-repeat fixed; 
-	background: url(../images/panel3.png) 100% 2204px no-repeat fixed; 
-	background: url(../images/panel4.png) 100% 3404px no-repeat fixed; 
-	background: url(../images/panel5.png) 100% 4604px no-repeat fixed; 
-	background: url(../images/panel6.png) 100% 5666px no-repeat fixed; 
-	background: url(../images/panel7.png) 100% 6894px no-repeat fixed; 
+	background: url(../images/panel1.png),url(../images/panel2.png),url(../images/panel3.png),url(../images/panel4.png),
+		url(../images/panel5.png),url(../images/panel6.png),url(../images/panel7.png);
+	background-repeat: no-repeat fixed, no-repeat fixed, no-repeat fixed, no-repeat fixed, 
+		no-repeat fixed, no-repeat fixed, no-repeat fixed;
 	height: 2000px;  
 	margin: 0 auto; 
     width: 100%; 
@@ -39,3 +36,14 @@ body {
     position: relative; 
     box-shadow: 0 0 50px rgba(0,0,0,0.8);
 }
+
+
+/**
+100% 0 no-repeat fixed;       
+100% 1476px no-repeat fixed;  
+100% 2204px no-repeat fixed;  
+100% 3404px no-repeat fixed;  
+100% 4604px no-repeat fixed;  
+100% 5666px no-repeat fixed;  
+100% 6894px no-repeat fixed;  
+*/
