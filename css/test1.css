@@ -26,12 +26,12 @@ body {
 
 #bg-panel { 
 	background: url(../images/panel1.png) 50% 0 no-repeat fixed,
-		url(../images/panel2.png) 50% 0 no-repeat fixed, 
-		url(../images/panel3.png) 50% 0 no-repeat fixed, 
-		url(../images/panel4.png) 50% 0 no-repeat fixed, 
-		url(../images/panel5.png) 50% 0 no-repeat fixed, 
-		url(../images/panel6.png) 50% 0 no-repeat fixed, 
-		url(../images/panel7.png) 50% 0 no-repeat fixed; 
+		url(../images/panel2.png) 50% 1475 no-repeat fixed; 
+		//url(../images/panel3.png) 50% 0 no-repeat fixed, 
+		//url(../images/panel4.png) 50% 0 no-repeat fixed, 
+		//url(../images/panel5.png) 50% 0 no-repeat fixed, 
+		//url(../images/panel6.png) 50% 0 no-repeat fixed, 
+		//url(../images/panel7.png) 50% 0 no-repeat fixed; 
 
 	height: 1000px;  
 	margin: 0 auto; 
