@@ -16,6 +16,11 @@ body {
     transform: translateY(-50%);
 }
 
+#bg-panel  {
+   	margin: 0 auto;
+	width: 85%;
+}
+
 #bg-panel-1 { 
 	background-image: url(../images/panel1.png);
     background-repeat: no-repeat;
