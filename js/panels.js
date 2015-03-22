@@ -35,23 +35,6 @@ $(document).ready(function()  {
 		$(this).width(1200);
 	});
 	
-    /**
-	 * Move the background sections.
-	 */
-	$('section[data-type="background"]').each(function(){
-		var $bgobj = $(this); // assigning the object
-                    
-		$(window).scroll(function() {
-			// Scroll the background at var speed
-			// the yPos is a negative value because we're scrolling it UP!								
-			var yPos = -($window.scrollTop());/// $bgobj.data('speed'));
-            var coords = '50% ' + yPos + 'px';
-            //var coords = getCoordStr( yPos );
-			// Move the background
-			$bgobj.css({ backgroundPosition: coords });
-		}); // window scroll Ends
-	});
-
     /** Foreground Section Processing */
     var topLimit = 300; //As measured from top
     //var bottomLimit = 300; //As measured from bottom
@@ -64,11 +47,9 @@ $(document).ready(function()  {
 		var $fgobj = $(this); // assigning the object
                     
 		$(window).scroll(function() {
-			var yPos = (($window.scrollTop()+topLimit));
-            // Put together our final background position
-			var coords = '68% '+ yPos + 'px';
-			// Move the background
-			$fgobj.css({ backgroundPosition: coords });
+			var yPos = (($window.scrollTop()));
+            yPos += 200;
+            $fgobj.css( { top : yPos+'px' } );
 		}); // window scroll Ends
 	});	
 }); 
