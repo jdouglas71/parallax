@@ -5,10 +5,8 @@
  */
 
 /**
- * TODO: Calculate full length of background sections.
- * TODO: Define end points for foreground section scrolling.
  * TODO: Define FG-BG overlap points that trigger bg image section swapping.
- * 
+ * TODO: Handle scaling.
  */
 
 $(document).ready(function()  {
@@ -42,27 +40,27 @@ $(document).ready(function()  {
 	/**
 	 * Move the foreground section.
 	 */
-        $('section[data-type="foreground"]').each(function(){
-		    var $fgobj = $(this); // assigning the object
-            var ratio = Math.round(sectionSize/$window.height()) + 1;
-                    
-		    $(window).scroll(function() {
-			    var yPos = $window.scrollTop();
-                prevSchool = yPos;
-                var curPos = parseInt($fgobj.css('top'),10);
-                if( isNaN(curPos) ) curPos = topLimit;
-                console.log( "curPos: " + curPos );
-                console.log( "yPos+topLimit: " + (yPos+topLimit) );
-                console.log( "ratio: " + ratio );
-                if( (curPos < bottomLimit) || (curPos > (yPos+$window.height()-100)) )  
-                {
-                    yPos += $(window).scrollTop()/ratio;
-                    yPos += topLimit;
-                    console.log( "FG yPos: " + yPos );
-                    $fgobj.css( { top : yPos } );
-                }
-            }); 
-        });
+	$('section[data-type="foreground"]').each(function(){
+		var $fgobj = $(this); // assigning the object
+		var ratio = Math.round(sectionSize/$window.height()) + 1;
+				
+		$(window).scroll(function() {
+			var yPos = $window.scrollTop();
+			prevSchool = yPos;
+			var curPos = parseInt($fgobj.css('top'),10);
+			if( isNaN(curPos) ) curPos = topLimit;
+			//console.log( "curPos: " + curPos );
+			//console.log( "yPos+topLimit: " + (yPos+topLimit) );
+			//console.log( "ratio: " + ratio );
+			if( (curPos < bottomLimit) || (curPos > (yPos+$window.height()-100)) )  
+			{
+				yPos += $(window).scrollTop()/ratio;
+				yPos += topLimit;
+				//console.log( "FG yPos: " + yPos );
+				$fgobj.css( { top : yPos } );
+			}
+		}); 
+	});
 }); 
 
 /** 
