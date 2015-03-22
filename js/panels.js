@@ -48,7 +48,7 @@ $(document).ready(function()  {
             var coords = '50% ' + yPos + 'px';
             //var coords = getCoordStr( yPos );
 			// Move the background
-			$bgobj.css({ backgroundPosition: coords });
+			//$bgobj.css({ backgroundPosition: coords });
 		}); // window scroll Ends
 	});
 
