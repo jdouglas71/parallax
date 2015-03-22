@@ -26,9 +26,9 @@ body {
     background-repeat: no-repeat;
     background-size: contain; 
 
-	//margin: 0 auto; 
-    //width: 1200px; 
-    /max-width: 1200px; 
+	margin: 0 auto; 
+    width: 1200px; 
+    max-width: 1200px; 
 }
 
 #bg-panel-2 { 
