@@ -12,6 +12,7 @@
 $(document).ready(function()  {
 	// Cache the Window object
 	$window = $(window);
+    var $oldPanel = 0;
 
     /** Background Section Processing */
     //The panel sizes 
@@ -43,13 +44,20 @@ $(document).ready(function()  {
 	$('section[data-type="foreground"]').each(function(){
 		var $fgobj = $(this); // assigning the object
 		var ratio = Math.round(sectionSize/$window.height()) + 1;
-				
+
 		$(window).scroll(function() {
 			var yPos = $window.scrollTop();
 			prevSchool = yPos;
 			var curPos = parseInt($fgobj.css('top'),10);
 			if( isNaN(curPos) ) curPos = topLimit;        
-			console.log( "Panel Number: " + getPanelNumber(curPos) );
+			var panelNum = getPanelNumber(curPos); 
+            if( panelNum != $oldPanel )  
+            {
+                console.log( "SWAPPING" );
+                swapPanelImages( panelNum );
+            }
+            $oldPanel = panelNum;
+            console.log( "Panel Number: " + getPanelNumber(curPos) );
 			console.log( "curPos: " + curPos );
 			//console.log( "yPos+topLimit: " + (yPos+topLimit) );
 			//console.log( "ratio: " + ratio );
@@ -78,6 +86,18 @@ $(document).ready(function()  {
 			}
 		}
 	}
+
+    /**
+     * Swap images
+     */
+    function swapPanelImages(panelNum)
+    {
+        if( panelNum == 2 || panelNum == 6 || panelNum == 7 ) return;
+        $('#bg-panel-'+panelNum).fadeOut( 1000, function() {
+            $(this).css( 'background-image', 'url(../images/panel'+panelNum+'.png)' );
+            $(this).fadeIn( 500 );    
+        });
+    }
 }); 
 
 /** 
