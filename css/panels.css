@@ -23,6 +23,7 @@ body {
     width: 100%; 
     max-width: 1920px; 
     position: relative; 
+	z-index: 4;
 }
 
 #bg-panel  {
