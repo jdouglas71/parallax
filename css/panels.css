@@ -16,6 +16,15 @@ body {
     transform: translateY(-50%);
 }
 
+#touchjet{ 
+	background: url(../images/touchjet.png) 68% 300px no-repeat fixed; 
+	height: 20000px;  
+	margin: 0 auto; 
+    width: 100%; 
+    max-width: 1920px; 
+    position: relative; 
+}
+
 #bg-panel  {
    	margin: 0 auto;
 	width: 85%;
