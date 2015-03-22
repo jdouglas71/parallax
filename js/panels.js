@@ -48,7 +48,8 @@ $(document).ready(function()  {
 			var yPos = $window.scrollTop();
 			prevSchool = yPos;
 			var curPos = parseInt($fgobj.css('top'),10);
-			if( isNaN(curPos) ) curPos = topLimit;
+			if( isNaN(curPos) ) curPos = topLimit;        
+			console.log( "Panel Number: " + getPanelNumber() );
 			//console.log( "curPos: " + curPos );
 			//console.log( "yPos+topLimit: " + (yPos+topLimit) );
 			//console.log( "ratio: " + ratio );
@@ -57,10 +58,27 @@ $(document).ready(function()  {
 				yPos += $(window).scrollTop()/ratio;
 				yPos += topLimit;
 				//console.log( "FG yPos: " + yPos );
-				$fgobj.css( { top : yPos } );
+				$fgobj.css( { top : yPos } );              
 			}
 		}); 
 	});
+
+	/**
+	 * Get the panel number based on curPos.
+	 */
+	function getPanelNumber(curPos)
+	{
+		var i = 1;
+		var total = panelSizes[0];
+		for(i=1; i<panelSizes.length; i++)
+		{
+			if( curPos < total )
+			{
+				return i;
+			}
+			i++;
+		}
+	}
 }); 
 
 /** 
