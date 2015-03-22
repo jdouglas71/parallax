@@ -30,8 +30,8 @@ $(document).ready(function()  {
 	 * Set the heights of the panel divs.
 	 */
 	i = 0;
-	$('div#bg-panel').each(function() {
-		$(this).height(panelSizes[i++]);
+	$('div.bg-panel').each(function() {
+		$(this).height(Math.round(panelSizes[i++]*scaleFactor));
 		$(this).width(1200);
 	});
 	
