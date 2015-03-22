@@ -37,7 +37,9 @@ $(document).ready(function()  {
 	
     /** Foreground Section Processing */
     var topLimit = 200; //As measured from top
-    var bottomLimit = 1300; //As measured from bottom
+    var bottomLimit = 300; //As measured from bottom
+    var foregroundLimit = sectionSize - topLimit - bottomLimit;
+    var bgFGRatio = foregroundLimit / sectionSize;
 	/**
 	 * Move the foreground section.
 	 */
@@ -45,12 +47,13 @@ $(document).ready(function()  {
 		var $fgobj = $(this); // assigning the object
                     
 		$(window).scroll(function() {
-			var yPos = $window.scrollTop();
-            yPos += topLimit;
-            console.log( "FG yPos: " + yPos );
-            $fgobj.css( { top : yPos } );//, backgroundPosition : "68% "+yPos+"px" } );
-		}); 
-    });	
+			var yPos = Math.round(($window.scrollTop())*bgFGRatio);
+            yPos += 200;
+            var coords = yPos + 'px';
+            console.log( "FG yPos: " + coords );
+            $fgobj.css( { top : coords } );
+		}); // window scroll Ends
+	});	
 }); 
 
 /** 
