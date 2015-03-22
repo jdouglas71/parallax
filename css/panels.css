@@ -10,7 +10,7 @@ body {
     transform-style: preserve-3d;
 }
 
-section.bg-panel {
+.element {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -21,10 +21,9 @@ section.bg-panel {
     background-repeat: no-repeat;
     background-size: contain; 
 
-	margin: 0 auto; 
-    width: 1200px; 
-    max-width: 1200px; 
-    position: relative; 
+	//margin: 0 auto; 
+    //width: 1200px; 
+    /max-width: 1200px; 
 }
 
 #bg-panel-2 { 
@@ -32,11 +31,10 @@ section.bg-panel {
     background-repeat: no-repeat;
     background-size: contain; 
 
-	margin: 0 auto; 
-    width: 1200px; 
-    max-width: 1200px; 
-    position: relative; 
-    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	//margin: 0 auto; 
+    //width: 1200px; 
+    //max-width: 1200px; 
+    //position: relative; 
 }
 
 #bg-panel-3 { 
@@ -44,11 +42,10 @@ section.bg-panel {
     background-repeat: no-repeat;
     background-size: contain; 
 
-	margin: 0 auto; 
-    width: 1200px; 
-    max-width: 1200px; 
-    position: relative; 
-    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	//margin: 0 auto; 
+    //width: 1200px; 
+    //max-width: 1200px; 
+    //position: relative; 
 }
 
 #bg-panel-4 { 
@@ -56,11 +53,10 @@ section.bg-panel {
     background-repeat: no-repeat;
     background-size: contain; 
 
-	margin: 0 auto; 
-    width: 1200px; 
-    max-width: 1200px; 
-    position: relative; 
-    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	//margin: 0 auto; 
+    //width: 1200px; 
+    //max-width: 1200px; 
+    //position: relative; 
 }
 
 #bg-panel-5 { 
@@ -68,23 +64,31 @@ section.bg-panel {
     background-repeat: no-repeat;
     background-size: contain; 
 
-	margin: 0 auto; 
-    width: 1200px; 
-    max-width: 1200px; 
-    position: relative; 
-    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	//margin: 0 auto; 
+    //width: 1200px; 
+    //max-width: 1200px; 
+    //position: relative; 
 }
 
 #bg-panel-6 { 
 	background-image: url(../images/panel6.png);
     background-repeat: no-repeat;
     background-size: contain; 
-	height: 1000px;  
 
-	margin: 0 auto; 
-    width: 1200px; 
-    max-width: 1200px; 
-    position: relative; 
-    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	//margin: 0 auto; 
+    //width: 1200px; 
+    //max-width: 1200px; 
+    //position: relative; 
+}
+
+#bg-panel-7 { 
+	background-image: url(../images/panel7.png);
+    background-repeat: no-repeat;
+    background-size: contain; 
+
+	//margin: 0 auto; 
+    //width: 1200px; 
+    //max-width: 1200px; 
+    //position: relative; 
 }
 
