@@ -37,20 +37,32 @@ $(document).ready(function()  {
 	
     /** Foreground Section Processing */
     var topLimit = 200; //As measured from top
-    var bottomLimit = 1300; //As measured from bottom
+    var bottomLimit = 3045; //As measured from bottomo
+    var deltaFG = bottomLimit - topLimit;
 	/**
 	 * Move the foreground section.
 	 */
-	$('section[data-type="foreground"]').each(function(){
-		var $fgobj = $(this); // assigning the object
+        $('section[data-type="foreground"]').each(function(){
+		    var $fgobj = $(this); // assigning the object
+            var ratio = Math.round(sectionSize/$window.height()) + 1;
                     
-		$(window).scroll(function() {
-			var yPos = $window.scrollTop();
-            yPos += topLimit;
-            console.log( "FG yPos: " + yPos );
-            $fgobj.css( { top : yPos } );//, backgroundPosition : "68% "+yPos+"px" } );
-		}); 
-    });	
+		    $(window).scroll(function() {
+			    var yPos = $window.scrollTop();
+                prevSchool = yPos;
+                var curPos = parseInt($fgobj.css('top'),10);
+                if( isNaN(curPos) ) curPos = topLimit;
+                console.log( "curPos: " + curPos );
+                console.log( "yPos+topLimit: " + (yPos+topLimit) );
+                console.log( "ratio: " + ratio );
+                if( (curPos < bottomLimit) || (curPos > (yPos+$window.height()-100)) )  
+                {
+                    yPos += $(window).scrollTop()/ratio;
+                    yPos += topLimit;
+                    console.log( "FG yPos: " + yPos );
+                    $fgobj.css( { top : yPos } );
+                }
+            }); 
+        });
 }); 
 
 /** 

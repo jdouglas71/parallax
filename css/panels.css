@@ -17,7 +17,7 @@ body {
 }
 
 #touchjet { 
-	background: url(../images/touchjet.png) 68% 200px no-repeat fixed; 
+	background: url(../images/touchjet.png) 68% 10px no-repeat;// fixed; 
     background-color: #4d7fad;  
 	height: 70px;  
 	margin: 0 auto; 
