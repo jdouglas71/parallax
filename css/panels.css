@@ -16,48 +16,11 @@ section.bg-panel {
     transform: translateY(-50%);
 }
 
-#tjbackground { 
-	background: url(../images/background.png) 50% 0 no-repeat fixed; 
-	height: 20000px;  
-	margin: 0 auto; 
-    width: 100%; 
-    max-width: 1920px; 
-    position: relative; 
-    box-shadow: 0 0 50px rgba(0,0,0,0.8);
-}
-
-#touchjet{ 
-	background: url(../images/touchjet.png) 68% 300px no-repeat fixed; 
-	height: 20000px;  
-	margin: 0 auto; 
-    width: 100%; 
-    max-width: 1920px; 
-    position: relative; 
-    box-shadow: 0 0 50px rgba(0,0,0,0.8);
-}
-
-#bg-panel { 
-	background-image: url(../images/panel1.png);
-    background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-attachment: fixed;
-    background-size: contain; 
-	height: 1000px;  
-
-	margin: 0 auto; 
-    width: 1200px; 
-    max-width: 1200px; 
-    position: relative; 
-    box-shadow: 0 0 50px rgba(0,0,0,0.8);
-}
-
 #bg-panel-1 { 
 	background-image: url(../images/panel1.png);
     background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-attachment: fixed;
     background-size: contain; 
-	height: 1000px;  
+	//height: 1000px;  
 
 	margin: 0 auto; 
     width: 1200px; 
@@ -69,8 +32,8 @@ section.bg-panel {
 #bg-panel-2 { 
 	background-image: url(../images/panel2.png);
     background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-attachment: fixed;
+    //background-position: 50% 0;
+   // background-attachment: fixed;
     background-size: contain; 
 	height: 1000px;  
 
@@ -84,8 +47,8 @@ section.bg-panel {
 #bg-panel-3 { 
 	background-image: url(../images/panel3.png);
     background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-attachment: fixed;
+    //background-position: 50% 0;
+    //background-attachment: fixed;
     background-size: contain; 
 	height: 1000px;  
 
@@ -99,8 +62,8 @@ section.bg-panel {
 #bg-panel-4 { 
 	background-image: url(../images/panel4.png);
     background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-attachment: fixed;
+    //background-position: 50% 0;
+    //background-attachment: fixed;
     background-size: contain; 
 	height: 1000px;  
 
@@ -114,8 +77,8 @@ section.bg-panel {
 #bg-panel-5 { 
 	background-image: url(../images/panel5.png);
     background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-attachment: fixed;
+    //background-position: 50% 0;
+    //background-attachment: fixed;
     background-size: contain; 
 	height: 1000px;  
 
@@ -129,8 +92,8 @@ section.bg-panel {
 #bg-panel-6 { 
 	background-image: url(../images/panel6.png);
     background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-attachment: fixed;
+    //background-position: 50% 0;
+    //background-attachment: fixed;
     background-size: contain; 
 	height: 1000px;  
 
