@@ -16,8 +16,8 @@ $(document).ready(function()  {
 
     /** Background Section Processing */
     //The panel sizes 
-    var panelSizes = new Array( 1475, 728, 1200, 1200, 1200, 1062, 1228 );
-	var scaleFactor = 0.5;
+    var panelSizes = new Array( 738, 364, 600, 600, 600, 531, 614);
+	var scaleFactor = 1.0;
     //Calculate the size of the section based on all the panels and set it. 
     var sectionSize = 0, i = 0;
     for(i=0; i < panelSizes.length; i++)
