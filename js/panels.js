@@ -54,14 +54,14 @@ $(document).ready(function()  {
 			var curPos = parseInt($fgobj.css('top'),10);
 			if( isNaN(curPos) ) curPos = topLimit;        
 			var panelNum = getPanelNumber(curPos); 
-            if( panelNum != $oldPanel )  
+            if( (panelNum != $oldPanel) && (curPos > 300) )  
             {
-                console.log( "SWAPPING" );
+                //console.log( "SWAPPING" );
                 swapPanelImages( panelNum );
             }
             $oldPanel = panelNum;
-            console.log( "Panel Number: " + getPanelNumber(curPos) );
-			console.log( "curPos: " + curPos );
+            //console.log( "Panel Number: " + getPanelNumber(curPos) );
+			//console.log( "curPos: " + curPos );
 			//console.log( "yPos+topLimit: " + (yPos+topLimit) );
 			//console.log( "ratio: " + ratio );
 			if( (curPos < bottomLimit) || (curPos > (yPos+$window.height()-100)) )  
