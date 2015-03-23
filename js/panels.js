@@ -5,7 +5,6 @@
  */
 
 /**
- * TODO: Define FG-BG overlap points that trigger bg image section swapping.
  * TODO: Handle scaling.
  */
 
@@ -38,7 +37,7 @@ $(document).ready(function()  {
 	var swapState = new Array( false, true, false, false, false, true, true );
 	
     /** Foreground Section Processing */
-    var topLimit = 200; //As measured from top
+    var topLimit = 300; //As measured from top
     var bottomLimit = 3045; //As measured from bottomo
     var deltaFG = bottomLimit - topLimit;
 	/**
@@ -46,7 +45,7 @@ $(document).ready(function()  {
 	 */
 	$('section[data-type="foreground"]').each(function(){
 		var $fgobj = $(this); // assigning the object
-		var ratio = Math.round(sectionSize/$window.height()) + 1;
+		var ratio = Math.round(sectionSize/$window.height()) + 5;
 
 		$(window).scroll(function() {
 			var yPos = $window.scrollTop();
@@ -54,17 +53,19 @@ $(document).ready(function()  {
 			var curPos = parseInt($fgobj.css('top'),10);
 			if( isNaN(curPos) ) curPos = topLimit;        
 			var panelNum = getPanelNumber(curPos); 
-            if( (panelNum != $oldPanel) && (curPos > 300) )  
+            if( (panelNum != $oldPanel) )  
             {
+                var timeout = 700;
+                if( panelNum == 1 ) timeout = 3000;
                 //console.log( "SWAPPING" );
-                swapPanelImages( panelNum );
+                setTimeout(function() {swapPanelImages( panelNum );}, timeout );
             }
             $oldPanel = panelNum;
             //console.log( "Panel Number: " + getPanelNumber(curPos) );
 			//console.log( "curPos: " + curPos );
 			//console.log( "yPos+topLimit: " + (yPos+topLimit) );
 			//console.log( "ratio: " + ratio );
-			if( (curPos < bottomLimit) || (curPos > (yPos+$window.height()-100)) )  
+			if( (curPos < bottomLimit) || (curPos > (yPos+$window.height()-200)) )  
 			{
 				yPos += $(window).scrollTop()/ratio;
 				yPos += topLimit;
@@ -97,10 +98,8 @@ $(document).ready(function()  {
     {
 		if( !swapState[panelNum-1] )
 		{
-			$('#bg-panel-'+panelNum).fadeOut( 1000, function() {
-				$(this).css( 'background-image', 'url(../images/panel'+panelNum+'.png)' );
-				$(this).fadeIn( 500 );    
-			});
+            console.log( "Swapping Panel: " + panelNum );
+            $('img#bg-panel-'+panelNum).toggleClass("transparent");
 			swapState[panelNum-1] = true;
 		}
     }

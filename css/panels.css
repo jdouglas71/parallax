@@ -17,14 +17,16 @@ body {
 }
 
 #touchjet { 
-	background: url(../images/touchjet.png) 68% 10px no-repeat;
+	background: url(../images/device.png) 90% 1px no-repeat;
+    background-size: 20%;
     //background-color: #4d7fad;  
-	height: 70px;  
+	height: 25%;  
 	margin: 0 auto; 
     width: 100%; 
     max-width: 1200px; 
     position: absolute; 
 	z-index: 4;
+    top: 300px;
 }
 
 #bg-panel  {
@@ -33,15 +35,21 @@ body {
     z-index: -15;
 }
 
+#bg-panel img  {
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+}
+
+#bg-panel img.transparent  {
+    opacity: 0;
+}
 
 #bg-panel-1 { 
-	background-image: url(../images/panel1_0.png);
+	background-image: url(../images/panel1.png);
     background-repeat: no-repeat;
     background-size: contain; 
-
-	margin: 0 auto; 
-    width: 1200px; 
-    max-width: 1200px; 
 }
 
 #bg-panel-2 { 
@@ -51,19 +59,19 @@ body {
 }
 
 #bg-panel-3 { 
-	background-image: url(../images/panel3_0.png);
+	background-image: url(../images/panel3.png);
     background-repeat: no-repeat;
     background-size: contain; 
 }
 
 #bg-panel-4 { 
-	background-image: url(../images/panel4_0.png);
+	background-image: url(../images/panel4.png);
     background-repeat: no-repeat;
     background-size: contain; 
 }
 
 #bg-panel-5 { 
-	background-image: url(../images/panel5_0.png);
+	background-image: url(../images/panel5.png);
     background-repeat: no-repeat;
     background-size: contain; 
 }
