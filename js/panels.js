@@ -25,7 +25,7 @@ $(document).ready(function()  {
         sectionSize += Math.round(panelSizes[i]*scaleFactor);
     }
 
-	/**
+	/**                                          
 	 * Set the heights of the panel divs.
 	 */
 	i = 0;
@@ -33,6 +33,9 @@ $(document).ready(function()  {
 		$(this).height(Math.round(panelSizes[i++]*scaleFactor));
 		$(this).width(1200);
 	});
+
+	/** Track the "Swap state" of the panels. 2,6 and 7 don't have swap panels.*/
+	var swapState = new Array( false, true, false, false, false, true, true );
 	
     /** Foreground Section Processing */
     var topLimit = 200; //As measured from top
@@ -92,11 +95,14 @@ $(document).ready(function()  {
      */
     function swapPanelImages(panelNum)
     {
-        if( panelNum == 2 || panelNum == 6 || panelNum == 7 ) return;
-        $('#bg-panel-'+panelNum).fadeOut( 1000, function() {
-            $(this).css( 'background-image', 'url(../images/panel'+panelNum+'.png)' );
-            $(this).fadeIn( 500 );    
-        });
+		if( !swapState[panelNum-1] )
+		{
+			$('#bg-panel-'+panelNum).fadeOut( 1000, function() {
+				$(this).css( 'background-image', 'url(../images/panel'+panelNum+'.png)' );
+				$(this).fadeIn( 500 );    
+			});
+			swapState[panelNum-1] = true;
+		}
     }
 }); 
 
